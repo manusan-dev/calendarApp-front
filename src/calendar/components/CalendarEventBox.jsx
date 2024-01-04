@@ -1,13 +1,16 @@
 
 export const CalendarEventBox = ({ event }) => {
 
-    const { title, user} = event;
+    const { title, creator, user} = event;
 
+    if(creator.name == null){
+        creator.name = user.name;
+    }
     return (
             <>
                 <strong>{title}</strong>
                 <br />
-                <strong> Creado por: {user.name}</strong>
+                <strong> Creado por: {creator.name}</strong>
             </>
         )
 }

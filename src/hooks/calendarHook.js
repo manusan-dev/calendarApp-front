@@ -103,6 +103,9 @@ export const CalendarHook = () => {
             Swal.fire('Nota inválida', 'Debes ingresar una nota', 'error');
             return;
         };
+        
+        
+        console.log(formValues);
 
         await startSavingEvent( formValues );
         closeDateModal();
